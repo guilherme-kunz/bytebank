@@ -3,13 +3,8 @@ import 'package:bytebank/models/contact.dart';
 import 'package:bytebank/screens/contact_form.dart';
 import 'package:flutter/material.dart';
 
-class ContactsList extends StatefulWidget {
+class ContactsList extends StatelessWidget {
 
-  @override
-  _ContactsListState createState() => _ContactsListState();
-}
-
-class _ContactsListState extends State<ContactsList> {
   final ContactDao _dao = ContactDao();
 
   @override
@@ -19,7 +14,7 @@ class _ContactsListState extends State<ContactsList> {
         title: Text('Transfer'),
       ),
       body: FutureBuilder<List<Contact>>(
-        initialData: [],
+        initialData: List(),
         future: _dao.findAll(),
         builder: (context, snapshot) {
           switch (snapshot.connectionState) {
@@ -59,7 +54,7 @@ class _ContactsListState extends State<ContactsList> {
             MaterialPageRoute(
               builder: (context) => ContactForm(),
             ),
-          ).then((value) => setState(() {}));
+          );
         },
         child: Icon(
           Icons.add,

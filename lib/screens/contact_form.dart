@@ -49,7 +49,7 @@ class _ContactFormState extends State<ContactForm> {
               padding: const EdgeInsets.only(top: 16.0),
               child: SizedBox(
                 width: double.maxFinite,
-                child: ElevatedButton(
+                child: RaisedButton(
                   child: Text('Create'),
                   onPressed: () {
                     final String name = _nameController.text;
