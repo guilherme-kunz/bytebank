@@ -1,6 +1,6 @@
-import 'package:alura_crashlytics/models/contact.dart';
-import 'package:alura_crashlytics/database/app_database.dart';
+import 'package:bytebank/models/contact.dart';
 import 'package:sqflite/sqflite.dart';
+import 'package:bytebank/database/app_database.dart';
 
 class ContactDao {
 
