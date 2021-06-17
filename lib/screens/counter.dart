@@ -1,3 +1,4 @@
+import 'package:bytebank/components/container.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,7 +14,7 @@ class CounterCubit extends Cubit<int> {
   void decrement() => emit(state - 1);
 }
 
-class CounterContainer extends StatelessWidget {
+class CounterContainer extends BlocContainer {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(create: (_) => CounterCubit(), child: CounterView());
